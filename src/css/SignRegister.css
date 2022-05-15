@@ -1,0 +1,43 @@
+
+/* sign in and  register */
+.signin-container{
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    margin: 70px 35%;
+    background-color: white;
+    border-radius: 10px;
+}
+.signin-container h4{
+    width: auto;
+    text-align: center;
+}
+.signin-container .input{
+    margin-top: 15px;
+}
+.signin-container .button{
+    width: auto;
+    margin-top: 20px;
+    background-color:#05595B ;
+}
+.signin-container .button:hover{
+    background-color:#05595B ;
+}
+.signin-container p{
+    text-align: center;
+    margin-top: 20px;
+}
+@media (max-width:360px){
+    .signin-container{
+        width: 90%;
+        margin: 70px 5%;
+    }
+}
+@media (min-width:361px) and (max-width:600px){
+    .signin-container{
+        width: 60%;
+        margin: 50px 20%;
+    }
+}
+

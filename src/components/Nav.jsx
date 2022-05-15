@@ -1,28 +1,42 @@
-import React, { useContext, useEffect, useState } from 'react'
+import React, { useContext, useState} from 'react'
+import MenuIcon from '@mui/icons-material/Menu';
 import { Link } from 'react-router-dom'
+import '../css/Nav.css'
 import Badge from '@mui/material/Badge';
 import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
 import { CartContext } from '../CartContext';
-
 const Nav = () => {
     const {cartItem} =useContext(CartContext)
-    console.log(cartItem);
+    const [show,setShow] = useState(false);
+    const showbar  = ()=>{
+        setShow(!show)
+    }
   return (
     <>
-        <nav class="navbar navbar-light bg-light sticky-top">
-            <div class="container">
-                <Link to='/' class="navbar-brand">
-                    <img style={{height:60 } }  className='ml-5' src="/product-image/logo.png" alt="logo" />
+        <nav class="sticky-top">
+                <Link to='/' class="navbar-logo">
+                    <img className='ml-5' src="/product-image/logo.png" alt="logo" />
                 </Link>
-                <ul className="d-flex">
-                    <Link class="navbar-brand"  to="/">Home</Link>
-                    <Link class="navbar-brand" to="/products">Products</Link>
-                    <Link class="navbar-brand" to="/cart">
-                        <Badge badgeContent={cartItem.totalitems ?cartItem.totalitems :0 } color="primary"><ShoppingCartIcon /></Badge>
+                <ul className={`${show ? "show" :""}`}>
+                    <Link  to="/">Menu</Link>
+                    <Link  to="/products">Products</Link>
+                    <Link  to="/offers">Offers</Link>
+                    <Link  to="/myorders">My Orders</Link>
+                    <Link  to="/register">Register</Link>
+                    <Link  to="/signin">Sign in</Link>
+                    <Link  to="/logout">Logout</Link>
+                    <Link className='cart-icon' to="/cart">
+                        <Badge badgeContent={cartItem.totalitems ?cartItem.totalitems :0 }><ShoppingCartIcon /></Badge>
                     </Link>
                 </ul>
-              
-            </div>
+                
+                <input type="checkbox" id='check' />
+                <label for="check" className='nav-icon' >
+                    <Link className='cart-icon' to="/cart">
+                            <Badge badgeContent={cartItem.totalitems ?cartItem.totalitems :0 }><ShoppingCartIcon /></Badge>
+                    </Link>
+                    <MenuIcon className='menu-icon' onClick={showbar} />
+                </label>
         </nav>
     </>
   )

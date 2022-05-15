@@ -1,0 +1,146 @@
+.cart-container{
+    width: 80%;
+    margin:30px 10%
+}
+.cart-caption{
+    font-size: 20px;
+    text-align: center;
+}
+.cart-amount{
+    width: 80%;
+    margin: 10px 10%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+.cart-amount > .amount,button{
+    width: 25%;
+}
+.cart-amount > button{
+    border:none;
+    background-color: #05595B;
+    border-radius: 25px;
+    margin-top: 20px;
+    color: white;
+} 
+
+
+@media (min-width:601px) and (max-width:900px){
+    .cart-container{
+        width: 90%;
+        margin: 5px 5%;
+    }
+}
+
+
+/* cartItem  */
+.cartItem-container{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    background-color: white;
+    margin: 5px;
+    padding: 5px;
+}
+.cartItem-container img{
+    width: 8%;
+    margin: 5px 10% 5px 0px;
+}
+.cartItem-container .cart-item-name{
+    width: 20%;
+    text-align: center;
+}
+.cartItem-container .cart-no-item{
+    width: 20%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.cartItem-container .cart-item-prize{
+    width: 20%;
+    text-align: center;
+}
+.cartItem-container .button{
+    border: none;
+    margin-left: 10%;
+    border-radius: 25px;
+    color: #05595B;
+}
+.cartItem-container .cart-no-item .dec-btn{
+    background-color: #05595B;
+    border-radius: 50%;
+    color: white;
+}
+.cartItem-container .cart-no-item .add-btn{
+    background-color: #05595B;
+    border-radius: 50%;
+    color: white;
+}
+.empty-img{
+    width: 40%;
+    margin: 0px 30%;
+}
+@media (max-width:600px){
+    .empty-img{
+        width: 70%;
+        margin: 0px 15%;
+    }
+    .cart-container{
+        width: 90%;
+        margin: 10px 5%;
+        display: flex;
+    }
+    .cartItem-container{
+        display: block;
+        margin-top: 20px;
+        position: relative;
+        padding:10px 5px;
+        box-shadow: -2px 3px 3px 2px rgba(0, 0, 0, 0.174);
+    }
+    .cartItem-container img{
+        width: 50%;
+        margin: 5px 25%;
+    }
+    .cartItem-container .cart-item-name{
+        margin: 5px 40%;
+    }
+    .cartItem-container .cart-no-item{
+        width :40%;
+        margin: 5px 30%;
+    }
+    .cart-amount{
+        align-items: center;
+    }
+    .cartItem-container .cart-item-prize{
+        width: 40%;
+        margin: 5px 30%;
+        box-shadow: -2px 3px 3px 2px rgba(0, 0, 0, 0.174);
+    }
+    .cartItem-container > .button{
+        position: absolute;
+        top: 5px;
+        right: 5px;
+    }
+    .cart-amount{
+        margin: 0px;
+        width: 100%;
+        position: fixed;
+        bottom: 0px;
+        left: 0px;
+        background-color: #6a8c83;;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        padding: 5px 10px;
+    }
+    .cart-amount > .amount{
+        width: 40%;
+        color: white;
+    }
+    .cart-amount > button{
+        width: 40%;
+        margin: 0px;
+        background-color: white;
+        color: black;
+    }
+}

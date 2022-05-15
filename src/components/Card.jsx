@@ -1,4 +1,5 @@
 import React,{useContext, useState} from 'react'
+import '../css/Card.css'
 import { Link } from 'react-router-dom'
 import { CartContext } from '../CartContext'
 export const cart =[]
@@ -6,7 +7,8 @@ export const addbtn={
     borderRadius:25,
     width:60,
     color:"white",
-    cursor:"pointer"
+    cursor:"pointer",
+    background:"#05595B"
 }
 const sizebtn ={
     background:"grey",
@@ -46,13 +48,13 @@ export function Card({item}) {
     }
   return (
     <>
-        <div className="card m-auto mt-5 mr-3 shadow " style={{width: 200}}>
-            <Link to={`/products/${item.id}`} ><img src={item.img} className="card-img-top" alt={item.img} style={{width: 200 ,height:150}} /></Link>
-            <h5 className="card-title text-center">{item.name}</h5>
-            <p className="card-text m-auto text-center " style={sizebtn}> {item.size} </p>
-            <div className="d-flex justify-content-between p-2">
+        <div className="card-container" >
+            <Link to={`/products/${item.id}`} ><img src={item.img}  alt={item.img} /></Link>
+            <h5 className="product-name">{item.name}</h5>
+            <p className="product-size" style={sizebtn}> {item.size} </p>
+            <div className="product-prize">
                 <p className="">&#8377; {item.prize}</p>
-                <p disabled={!added} onClick={(e)=>addCart(e,item.prize)} className={`${added ? "bg-primary" : "bg-success"} text-center shadow`} style={addbtn}>{added ? "Add" :"Added"}</p>
+                <p onClick={(e)=>addCart(e,item.prize)} className={`${!added && "bg-success"} text-center shadow`} style={addbtn}>{added ? "Add" :"Added"}</p>
             </div>
         </div>
     </>
