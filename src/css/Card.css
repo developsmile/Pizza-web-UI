@@ -26,14 +26,14 @@
 }
 @media (max-width:300px){
     .card-container{
-        width: 90%;
-        margin: 5px 5%;
+        width: 96%;
+        margin: 5px 2%;
     }
 }
 @media (min-width:300px) and (max-width:600px){
     .card-container{
-        width: 40%;
-        margin: 5px 5%;
+        width: 48%;
+        margin: 5px 1%;
     }
     .card-container img{
         height: 100px;

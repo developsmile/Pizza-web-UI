@@ -31,4 +31,12 @@
     .home-container{
         display: block;
     }
+    .home-container .right button{
+        width: 40%;
+    }
+}
+@media (max-width:300px){
+    .home-container .right button{
+        width: 70%;
+    }
 }

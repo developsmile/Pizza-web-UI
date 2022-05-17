@@ -18,13 +18,13 @@ const Nav = () => {
                     <img className='ml-5' src="/product-image/logo.png" alt="logo" />
                 </Link>
                 <ul className={`${show ? "show" :""}`}>
-                    <Link  to="/">Menu</Link>
-                    <Link  to="/products">Products</Link>
-                    <Link  to="/offers">Offers</Link>
-                    <Link  to="/myorders">My Orders</Link>
-                    <Link  to="/register">Register</Link>
-                    <Link  to="/signin">Sign in</Link>
-                    <Link  to="/logout">Logout</Link>
+                    <Link onClick={()=>setShow(!show)}  to="/">Menu</Link>
+                    <Link onClick={()=>setShow(!show)} to="/products">Products</Link>
+                    <Link onClick={()=>setShow(!show)} to="/offers">Offers</Link>
+                    <Link onClick={()=>setShow(!show)} to="/myorders">My Orders</Link>
+                    <Link onClick={()=>setShow(!show)} to="/register">Register</Link>
+                    <Link onClick={()=>setShow(!show)} to="/signin">Signin</Link>
+                    <Link onClick={()=>setShow(!show)} to="/logout">Logout</Link>
                     <Link className='cart-icon' to="/cart">
                         <Badge badgeContent={cartItem.totalitems ?cartItem.totalitems :0 }><ShoppingCartIcon /></Badge>
                     </Link>

@@ -5,11 +5,11 @@
     margin:20px 100px;
 }
 .product-container{
-    width: 90%;
+    width: 98%;
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-    margin: 30px 5%;
+    margin: 30px 1%;
 }
 @media (max-width:600px) {
     .product-title{
@@ -18,7 +18,7 @@
 }
 @media (min-width:601px) and (max-width:900px){
     .product-container{
-        margin: 30px 5%;
+        margin: 30px 1%;
     }
 }
 
